@@ -44,7 +44,60 @@
             android:id="@+id/ucrop"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:alpha="0" />
+            android:alpha="0">
+
+        </com.yalantis.ucrop.view.UCropView>
+
+        <LinearLayout
+            android:id="@+id/ucrop_wrap_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/ucrop_close_button"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/ucrop_roundcorner"
+                android:contentDescription="Close"
+                android:radius="24dp"
+                app:srcCompat="@drawable/ucrop_ic_cross" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:text="@string/ucrop_label_title"
+                android:textColor="#FFFFFF" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"></Space>
+
+            <Button
+                android:id="@+id/ucrop_apply_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="20dp"
+                android:background="#164A9F"
+                android:text="Apply"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
 
     </FrameLayout>
 

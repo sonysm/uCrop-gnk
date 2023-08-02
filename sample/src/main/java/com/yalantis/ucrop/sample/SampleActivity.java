@@ -3,12 +3,14 @@ package com.yalantis.ucrop.sample;
 import android.annotation.TargetApi;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Animatable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.CalendarContract;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -296,6 +298,10 @@ public class SampleActivity extends BaseActivity implements UCropFragmentCallbac
      */
     private UCrop advancedConfig(@NonNull UCrop uCrop) {
         UCrop.Options options = new UCrop.Options();
+
+        /// sony
+        options.setStatusBarColor(Color.rgb(42, 47, 57));
+        options.setRootViewBackgroundColor(Color.rgb(42, 47, 57));
 
         switch (mRadioGroupCompressionSettings.getCheckedRadioButtonId()) {
             case R.id.radio_png:
