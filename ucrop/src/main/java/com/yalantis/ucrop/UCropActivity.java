@@ -87,6 +87,8 @@ public class UCropActivity extends AppCompatActivity {
 
     private String mToolbarTitle;
 
+    private String mCountTitle;
+
     // Enables dynamic coloring
     private int mToolbarColor;
     private int mStatusBarColor;
@@ -300,8 +302,10 @@ public class UCropActivity extends AppCompatActivity {
         mToolbarCancelDrawable = intent.getIntExtra(UCrop.Options.EXTRA_UCROP_WIDGET_CANCEL_DRAWABLE, R.drawable.ucrop_ic_cross);
         mToolbarCropDrawable = intent.getIntExtra(UCrop.Options.EXTRA_UCROP_WIDGET_CROP_DRAWABLE, R.drawable.ucrop_ic_done);
         mToolbarTitle = intent.getStringExtra(UCrop.Options.EXTRA_UCROP_TITLE_TEXT_TOOLBAR);
-//        sony
+        // sony
         mToolbarTitle = mToolbarTitle != null ? mToolbarTitle : getResources().getString(R.string.ucrop_label_title);
+        mCountTitle = intent.getStringExtra("count_title");
+        //
         mLogoColor = intent.getIntExtra(UCrop.Options.EXTRA_UCROP_LOGO_COLOR, ContextCompat.getColor(this, R.color.ucrop_color_default_logo));
         mShowBottomControls = !intent.getBooleanExtra(UCrop.Options.EXTRA_HIDE_BOTTOM_CONTROLS, false);
         mRootViewBackgroundColor = intent.getIntExtra(UCrop.Options.EXTRA_UCROP_ROOT_VIEW_BACKGROUND_COLOR, ContextCompat.getColor(this, R.color.ucrop_color_crop_background));
@@ -336,6 +340,9 @@ public class UCropActivity extends AppCompatActivity {
             setupScaleWidget();
             setupStatesWrapper();
         }
+
+        final TextView countTextView = findViewById(R.id.count_textview);
+        countTextView.setText(mCountTitle);
 
         findViewById(R.id.ucrop_close_button)
                 .setOnClickListener(new View.OnClickListener() {
