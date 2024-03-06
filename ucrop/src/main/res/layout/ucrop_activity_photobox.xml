@@ -44,8 +44,8 @@
             android:id="@+id/ucrop"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="96dp"
-            android:layout_marginBottom="68dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="74dp"
             android:alpha="0">
 
         </com.yalantis.ucrop.view.UCropView>
